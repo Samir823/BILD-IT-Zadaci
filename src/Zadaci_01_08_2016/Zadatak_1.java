@@ -17,7 +17,7 @@ public class Zadatak_1 {
 
 		System.out.println("Unesite brojeve u listu, nula prekida unos: ");
 
-		//Varijabla za kontrolisanje do while petlje
+		// Varijabla za kontrolisanje do while petlje
 		boolean prekidac = false;
 
 		// Do while petlja nas vraca na pocetak u slucaju pogresnog unosa
