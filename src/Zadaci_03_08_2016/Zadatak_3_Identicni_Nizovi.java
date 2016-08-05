@@ -29,6 +29,7 @@ public class Zadatak_3_Identicni_Nizovi {
 				// Omogucavamo korisniku da unese duzinu niza
 				System.out.println("Molimo vas unesite duzinu prvog niza: ");
 				int duzinaPrvog = unos.nextInt();
+				
 				int niz1[] = new int[duzinaPrvog];
 
 				System.out.println("Molimo vas unesite duzinu drugog niza: ");
@@ -58,7 +59,8 @@ public class Zadatak_3_Identicni_Nizovi {
 				} else
 					System.out.println("Nizovi su identicni");
 				prekidac = false;
-			} catch (Exception e) {//try catchom "hvatamo" exceptione koji se dese prilikom pogresnog unosa korisnika
+			} catch (Exception e) {// try catchom "hvatamo" exceptione koji se
+									// dese prilikom pogresnog unosa korisnika
 				System.out
 						.println("Doslo je do greske, molimo vas da unosite brojeve!!!");
 				unos.nextLine();
@@ -71,9 +73,13 @@ public class Zadatak_3_Identicni_Nizovi {
 
 	// metoda koja vraca true ili false
 	public static boolean equals(int[] niz1, int[] niz2) {
+		// selekcijom provjeravamo duzinu niza, ako nisu iste duzine metoda
+		// vraca false
 		if (niz1.length != niz2.length) {
 			return false;
 		}
+		// for petljom prolazimo kroz oba niza, provjeravamo jednakost, ako nisu
+		// jednaki na odredjenoj lokaciji metoda vraca false
 		for (int i = 0; i < niz1.length; i++) {
 			if (niz1[i] != niz2[i]) {
 				return false;
