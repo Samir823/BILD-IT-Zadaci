@@ -18,8 +18,6 @@ public class Zadatak_5_Suma_Prosjek_Unesenik {
 
 		System.out.println("Unesite brojeve, 0 prekida unos: ");
 
-		boolean on_off = false;
-
 		Scanner input = new Scanner(System.in);
 
 		int num = input.nextInt();// varijabla za unos korisnika

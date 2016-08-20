@@ -43,6 +43,8 @@ public class Zadatak_5_Broj_Ponavljanja {
 											// ponavljaju
 
 		poredak(list);// pozivanje metode
+
+		input.close();
 	}
 
 	public static void poredak(ArrayList<Integer> lista) {// metoda sortira i

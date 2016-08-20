@@ -12,22 +12,20 @@ public class Zadatak_4_Sort_Two_Dimensional_Array {
 		 * {{1, 1},{1, 2},{1, 7},{4, 1},{4, 2},{4, 5}}.
 		 */
 
-		// create matrix
-		int[][] m = { { 4, 2 }, { 1, 7 }, { 4, 5 }, { 1, 2 }, { 1, 1 },
+		int[][] matrica = { { 4, 2 }, { 1, 7 }, { 4, 5 }, { 1, 2 }, { 1, 1 },// kreiranje
+				// matrice
 				{ 4, 1 } };
 
-		// the method called for sort and print result
-		sort(m);
+		sort(matrica);// poziv i ispis metode
 
 	}
 
-	/** method sorts rows first then column and print result */
-	public static void sort(int m[][]) {
+	public static void sort(int m[][]) { // metoda sortira redove pa tek onda
+											// kolone
 
-		// sort rows
 		for (int i = 0; i < m.length - 1; i++) {
 			for (int j = 0; j < m.length - i - 1; j++) {
-				// if next row is greater than previous one switch
+
 				if (sum(m[j]) > sum(m[j + 1])) {
 					int[] tmp = m[j];
 					m[j] = m[j + 1];
@@ -36,10 +34,10 @@ public class Zadatak_4_Sort_Two_Dimensional_Array {
 				}
 			}
 		}
-		// sort columns
+
 		for (int i = 0; i < m.length - 1; i++) {
 			for (int j = 0; j < m.length - i - 1; j++) {
-				// if next column is greater than previous one switch
+
 				if (m[j][0] > m[j + 1][0]) {
 					int[] tmp = m[j];
 					m[j] = m[j + 1];
@@ -48,7 +46,7 @@ public class Zadatak_4_Sort_Two_Dimensional_Array {
 				}
 			}
 		}
-		// print
+
 		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[i].length; j++) {
 				System.out.print(m[i][j] + " ");
@@ -58,8 +56,7 @@ public class Zadatak_4_Sort_Two_Dimensional_Array {
 
 	}
 
-	/** method returning sum of elements in for rows of matrix */
-	public static int sum(int[] m) {
+	public static int sum(int[] m) {// metoda vraca sumu u redovima
 		int sum = 0;
 		for (int i : m) {
 			sum += i;

@@ -20,9 +20,9 @@ public class Zadatak_1_Weekly_Hours {
 
 		Scanner unos = new Scanner(System.in);
 
-		int[] uposlenici = new int[8];
+		int[] uposlenici = new int[8];// kreiranje niza uposlenika
 
-		int[][] sati = new int[8][7];
+		int[][] sati = new int[8][7];// kreiranje tabele
 
 		for (int i = 0; i < uposlenici.length; i++) {
 			uposlenici[i] = i;
@@ -33,10 +33,16 @@ public class Zadatak_1_Weekly_Hours {
 				sati[red][kolona] = (int) (Math.random() * 10);
 			}
 		}
-		System.out.println("                 Pon Uto Sri Èet Pet Sub Ned");//ispis dana u sedmici
+		System.out.println("                 Pon Uto Sri Èet Pet Sub Ned");// ispis
+																			// dana
+																			// u
+																			// sedmici
 		for (int red = 0; red < sati.length; red++) {
-			System.out.print("Uposlenik: " + uposlenici[red] + " ima ");//ispis uposlenika
-			for (int kolona = 0; kolona < sati[red].length; kolona++) {//ispis sedmicni sati
+			System.out.print("Uposlenik: " + uposlenici[red] + " ima ");// ispis
+																		// uposlenika
+			for (int kolona = 0; kolona < sati[red].length; kolona++) {// ispis
+																		// sedmicni
+																		// sati
 
 				System.out.print(" " + sati[red][kolona] + "  ");
 
@@ -47,4 +53,3 @@ public class Zadatak_1_Weekly_Hours {
 
 	}
 }
-

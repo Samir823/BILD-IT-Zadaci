@@ -11,7 +11,7 @@ public class Zadatak_2_Prosti_Brojevi {
 
 		int newLine = 0;
 
-		for (int i = 2; i <= 1000; i++) {
+		for (int i = 2; i <= 100; i++) {
 			if (isPrime(i)) {// petlja ide od 2 do 1000 i ispisuje svaki prost
 								// broj
 
