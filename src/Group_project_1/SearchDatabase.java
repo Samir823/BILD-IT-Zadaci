@@ -11,16 +11,16 @@ import java.util.Scanner;
 
 import com.sun.corba.se.pept.transport.Connection;
 
-
 public class SearchDatabase {
 
-	public static void main(String[] args) throws Exception  {
+	public static void main(String[] args) throws Exception {
 
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		String query = "";
 		getConnection();
 
-		// exception handling
+		
+		
 		try {
 			// prompting user to start search
 			System.out
@@ -46,7 +46,8 @@ public class SearchDatabase {
 		}
 
 	}
-	//Connection confirmation method
+
+	// Connection confirmation method
 	public static java.sql.Connection getConnection() throws Exception {
 
 		try {
@@ -56,8 +57,8 @@ public class SearchDatabase {
 			String password = "";
 			Class.forName(driver);
 
-			java.sql.Connection conn = DriverManager.getConnection(url, username,
-					password);
+			java.sql.Connection conn = DriverManager.getConnection(url,
+					username, password);
 			System.out.println("Connected");
 			return conn;
 
